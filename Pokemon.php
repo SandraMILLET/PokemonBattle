@@ -7,8 +7,8 @@ class Pokemon {
 
 
    public
-   function __construct($name, $lifeP, $atakP, $avatarP) {
-      $this->nom = $name;
+   function __construct($nameP, $lifeP, $atakP, $avatarP) {
+      $this->nom = $nameP;
       $this->vie = $lifeP;
       $this->atak = $atakP;
       $this->avatar = $avatarP;
@@ -30,4 +30,20 @@ class Pokemon {
    function getAvatar() {
       return $this->avatar;
    }
-}
+   public
+   function setLife() {
+      return $this->life;
+   }
+   public
+   function setAtak() {
+      return $this->atak;
+   }
+   public
+   function setName() {
+      return $this->name;
+   }
+   public
+   function setAvatar() {
+      return $this->avatar;
+   }
+};
