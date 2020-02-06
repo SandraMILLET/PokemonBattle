@@ -1,45 +1,42 @@
 class Pokemon {
-    constructor(atak, vie) {
-        this.atak = atak;
-        this.vie = vie;
-    }
+  constructor(atak, vie) {
+    this.atak = atak;
+    this.vie = vie;
+  }
 }
 
-Pok1 = new Pokemon(1, 120);
-Pok2 = new Pokemon(1, 100);
+Pok1 = new Pokemon(11, 100);
+Pok2 = new Pokemon(12, 1200);
 
-
-function castagne1(){
-    Pok2.vie = Pok2.vie - Pok1.atak;
+function castagne1() {
+  Pok2.vie = Pok2.vie - Pok1.atak;
 }
 
-function castagne2(){
-    Pok1.vie = Pok1.vie - Pok2.atak;
+function castagne2() {
+  Pok1.vie = Pok1.vie - Pok2.atak;
 }
 
 do {
+  if (Pok2.vie > 0) {
     castagne1();
-}
+  }
 
-while (Pok2.vie > 0){
-    if (Pok2.vie == 0) {
-        
-    }
-}
-
-do {
+  if (Pok1.vie >= 0) {
     castagne2();
+  }
+} while (Pok1.vie > 0, Pok2.vie > 0);
+
+console.log(Pok1.vie);
+console.log(Pok2.vie);
+
+if (Pok1.vie > 0) {
+    console.log("Bravo vous avez gagné");
 }
 
-while (Pok1.vie > 0){
-    if (Pok1.vie == 0){
-    }
+else {
+    console.log("Vous avez perdu");
 }
 
 
 
-castagne1();
-castagne2();
 
-console.log(Pok1.vie)
-console.log(Pok2.vie)
