@@ -46,34 +46,29 @@ strong {
 
 
 .darkrai {
-  width: 150px;
-  height: 150px; 
+  width: 100px;
+  height: 100px; 
 }
 
 .goupix {
-  width: 150px;
-  height: 150px; 
-}
+  width: 100px;
+  height: 100px; }
 
 .keunotor {
-  width: 150px;
-  height: 150px; 
-}
+  width: 100px;
+  height: 100px; }
 
 .pichu {
-  width: 150px;
-  height: 150px; 
-}
+  width: 100px;
+  height: 100px; }
 
 .noctali {
-  width: 150px;
-  height: 150px; 
-}
+  width: 100px;
+  height: 100px; }
 
 .tygnon {
-  width: 150px;
-  height: 150px; 
-}
+  width: 100px;
+  height: 100px; }
 .pokemons {
   display: flex;
   justify-content: space-around;
