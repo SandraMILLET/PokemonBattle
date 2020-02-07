@@ -5,37 +5,54 @@ class Pokemon {
   }
 }
 
-Pok1 = new Pokemon(13, 100);
-Pok2 = new Pokemon(20, 100);
+Pok1 = new Pokemon(15, 100);
+Pok2 = new Pokemon(20, 120);
 
 function castagne1() {
+  if (Pok2.vie <= Pok1.atak) {
+    alert("Vous avez gagné");
+}
   Pok2.vie = Pok2.vie - Pok1.atak;
+  console.log(Pok2.vie);
+  
 }
 
 function castagne2() {
+  if (Pok1.vie <= Pok2.atak) {
+    alert("Vous avez gagné");
+}
   Pok1.vie = Pok1.vie - Pok2.atak;
+  console.log(Pok1.vie);
+  
 }
 
-do {
-  if (Pok2.vie > 0) {
-    castagne1();
+function attaquer() {
+
+castagne1();
+castagne2();
+}
+
+/*
+ if (Pok2.vie > 0) {
+   castagne1();
   }
 
   if (Pok1.vie >= 0) {
     castagne2();
   }
-} while (Pok1.vie > 0, Pok2.vie > 0);
+} */
 
-console.log(Pok1.vie);
-console.log(Pok2.vie);
 
-if (Pok1.vie > 0) {
-    console.log("Vous avez gagné");
+
+
+
+
+if (Pok2.vie < 0) {
+  alert("Vous avez perdu");
 }
-
-else {
-    console.log("Vous avez perdu");
-}
+ //else {
+    //console.log("Vous avez perdu");
+//}
 
 
 
