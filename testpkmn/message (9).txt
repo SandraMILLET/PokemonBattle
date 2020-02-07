@@ -1,0 +1,80 @@
+unction characterChoice(){
+  $('.characters .char-container').click(function(){
+    // you have chosen a character
+
+    // your chosen character name
+    var name = $(this).children('h2').text().toLowerCase();
+
+    switch(gameData.step){
+      // switch for the current step in the game
+
+      case 1:
+        // step 1: choose your hero
+        for(var i in characters){
+          if(characters[i].name === name){
+            // find and save your chosen hero's data
+            gameData.hero = characters[i];
+          }
+        }
+
+        // remove the character from the available list
+        var char = $(this).remove();
+        // build my hero
+        populateChar($('.stadium .hero'), 'hero');
+
+        for(var i in gameData.hero.attacks){
+          // populate attack list
+          $('.attack-list').append('<li><p class="attack-name"><strong>'+gameData.hero.attacks[i].name+'</strong></p><p class="attack-count"><small><span>'+gameData.hero.attacks[i].avail.remaining+'</span>/'+gameData.hero.attacks[i].avail.total+'</small></p></li>');
+        }
+
+        $('.attack-list').addClass('disabled');
+
+        // update instructions
+        $('.instructions p').text('Choose your enemy');
+        // set health bar value
+        $('.stadium .hero progress').val(gameData.hero.hp.current);
+
+        // let your hero roar
+        playSound(name);
+
+        // move on to choosing an enemy
+        gameData.step = 2;
+        break;
+
+      case 2:
+        // step 2: choose your enemy
+        for(var i in characters){
+          if(characters[i].name === name){
+            // find and save the enemy data
+            gameData.enemy = characters[i];
+          }
+        }
+
+        // remove the enemy from the list
+        var char = $(this).remove();
+        // build the enemy
+        populateChar($('.stadium .enemy'), 'enemy');
+        // pad the stadium - give them some breathing room
+        $('.stadium .enemy').css({'padding':'25px 0'});
+
+        // update instructions
+        $('.instructions p').text('Fight!!!');
+
+        // hide the hero list
+        $('.characters').children().slideUp('500', function(){
+          $('.characters').addClass('hidden');
+        });
+
+        // update enemy health bar value
+        $('.stadium .enemy progress').val(gameData.enemy.hp.current);
+
+        // the enemy whimpers in fear
+        playSound(name);
+
+        // update step to attack phase and bind click events
+        gameData.step = 3;
+        attackList();
+        break;
+    }
+  });
+}

@@ -5,8 +5,8 @@ class Pokemon {
   }
 }
 
-Pok1 = new Pokemon(11, 100);
-Pok2 = new Pokemon(12, 1200);
+Pok1 = new Pokemon(13, 100);
+Pok2 = new Pokemon(20, 100);
 
 function castagne1() {
   Pok2.vie = Pok2.vie - Pok1.atak;
@@ -30,7 +30,7 @@ console.log(Pok1.vie);
 console.log(Pok2.vie);
 
 if (Pok1.vie > 0) {
-    console.log("Bravo vous avez gagné");
+    console.log("Vous avez gagné");
 }
 
 else {
