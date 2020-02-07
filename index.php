@@ -87,9 +87,13 @@ $pok6 = new Pokemon('Tygnon', 'Je cogne fort !', 'img/tygnon.png')
                     <img data-name="<?php echo $pok6->getName()   ?>" class="avatar"
                         src="<?php echo $pok6->getAvatar(); ?>">
                 </div>
+                <div id="hp1"></div>
+                <div id="hp2"></div>
+        
             </div>
-
+            
         </div>
+        
     </div>
     </div>
     <div class="box-btn">

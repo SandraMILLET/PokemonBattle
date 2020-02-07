@@ -46,4 +46,5 @@ class Pokemon {
    function setAvatar() {
       return $this->avatar;
    }
-};
+
+}
