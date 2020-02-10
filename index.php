@@ -142,7 +142,7 @@ $pok6 = new Pokemon('Tygnon', 200, 100, 'Je cogne fort !', 'img/tygnon.png')
                 <p>HP</p>
             </div>
 
-            <button onclick="attaquer()" type="button" id="boutonatk">ATTAQUER !</button>
+            <button onclick="attaquer()" type="button" id="boutonatk">ATTAQUER</button>
             <div class="life">
                 <p>Player 2 :</p>
                 <div id="hp2"></div>
