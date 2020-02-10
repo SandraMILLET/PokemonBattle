@@ -9,14 +9,12 @@ class Pokemon{
 
     private $avatar; // Path to Image
 
-    public function __construct(
-        $name = 'Salameche',
-        $description = 'crache du feu par le  ....',
-        $avatar = 'img/placeholder.png'
-        )
+    public function __construct($name,  $life, $atak, $description, $avatar)
     {
         $this->name = $name;
         $this->description = $description;
+        $this->life = $life;
+        $this->atak = $atak;
         $this->avatar = $avatar;
     }
 
@@ -35,6 +33,12 @@ class Pokemon{
 
     public function getAvatar(){
         return $this->avatar;
+    }
+    public function getStats() {
+        return $this->name;
+        return $this->description;
+        return $this->life;
+        return $this->atak;
     }
 
 }
