@@ -43,7 +43,8 @@ function choose() {
   document.getElementById("choose").style.visibility = "visible";
   document.getElementById("play").style.visibility = "hidden";
   document.getElementById("battle").style.visibility = "visible";
-  
+  document.getElementById("poke").style.display = "none";
+  document.getElementById("logo").style.display = "none";
   
   let elem = document.getElementById('choose');
   elem.style.visibility = "visible";
@@ -129,3 +130,4 @@ function reset() {
 //else {
 //console.log("Vous avez perdu");
 //}*/
+œ

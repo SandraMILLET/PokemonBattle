@@ -29,16 +29,16 @@ $pok6 = new Pokemon('Tygnon', 200, 100, 'Je cogne fort !', 'img/tygnon.png')
     <div class="container-fluid logo">
         <div class="row">
             <div class="col-12">
-                <img class="reset-logo"  src="img/pokemon-logo.png">
+                <img id="poke" class="reset-logo"  src="img/pokemon-logo.png">
             </div>
         </div>
     </div>
 
 
-    <div class="container-fluid poke">
+    <div class="container poke">
         <div class="row">
-            <img class="pokeball" src="./img/pokeball.png">
-            <button onclick="reset();" id="reset">RESET GAME !</button>
+            <img  class="pokeball" src="./img/pokeball.png">
+            
         </div>
     </div>
 
@@ -53,7 +53,7 @@ $pok6 = new Pokemon('Tygnon', 200, 100, 'Je cogne fort !', 'img/tygnon.png')
                     <button id="play">PLAY !</button>
             </div>
         </div>
-
+        <button onclick="reset();" id="reset">RESET GAME</button>
         <!-- POKEMON AVATAR -->
         <div class="container-fluid">
             <div class="row" id="choose">
@@ -141,7 +141,7 @@ $pok6 = new Pokemon('Tygnon', 200, 100, 'Je cogne fort !', 'img/tygnon.png')
                 <div id="hp1"></div>
                 <p>HP</p>
             </div>
-            <button id="battle">BATTLE !</button>
+
             <button onclick="attaquer()" type="button" id="boutonatk">ATTAQUER !</button>
             <div class="life">
                 <p>Player 2 :</p>
@@ -151,7 +151,6 @@ $pok6 = new Pokemon('Tygnon', 200, 100, 'Je cogne fort !', 'img/tygnon.png')
         </div>
     </div>
     <button id="battle">BATTLE !</button>
-
     <script type="text/javascript" src="js/script.js"></script>
 </body>
 
