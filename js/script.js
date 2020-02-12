@@ -81,9 +81,6 @@ function battle() {
   document.getElementById("test").style.visibility = "visible";
   document.getElementById("logo").style.visibility = "hidden";
 
-  let castagne = document.getElementById('labastonnade');
-  castagne.style.display = 'block';
-
 }
 
 let button2 = document.getElementById("battle");
