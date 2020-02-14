@@ -36,8 +36,6 @@ function attaquer() {
   document.getElementById("hp2").innerHTML = Pok2.life;
 }
 
-
-
 function choose() {
     
   document.getElementById("choose").style.visibility = "visible";
@@ -59,18 +57,21 @@ button.addEventListener("click",choose);
 
 
 
-let pokemons = document.getElementsByClassName("avatar");
-console.log(pokemons.lenght);
+let poke = document.getElementsByClassName("card");
+console.log(poke.length)
 
-for (let i = 0; i < (pokemons.length); i++) {
-  pokemons[i].addEventListener('click', function () {
+for (let i = 0; i < poke.length; i++) {
+  poke[i].addEventListener("click", function(event) {
+    event.target.classList.add("clicked");
 
-    //console.log(pokemons[i]);
-    let pok = pokemons[i];
-    console.log(pok.dataset.name, pok.dataset.life, pok.dataset.atak, pok.dataset.desc);
-  })
+    let clicked = document.getElementsByClassName("clicked");
 
+    if (clicked.length === 2) {
+      document.querySelector(".card:not(.clicked)").hidden = true;
+    }
+  });
 }
+
 
 
 
@@ -80,6 +81,7 @@ function battle() {
   document.getElementById("battle").style.display = "none";
   document.getElementById("test").style.visibility = "visible";
   document.getElementById("logo").style.visibility = "hidden";
+
 
 }
 
@@ -93,38 +95,3 @@ function reset() {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-/*
- if (Pok2.life > 0) {
-   castagne1();
-  }
-
-  if (Pok1.life >= 0) {
-    castagne2();
-  }
-} */
-
-
-
-
-
-
-/*if (Pok2.life < 0) {
-  alert("Vous avez perdu");
-  document.location.reload(true);
-}
-//else {
-//console.log("Vous avez perdu");
-//}*/
-œ

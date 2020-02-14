@@ -1,6 +1,6 @@
 /* pk img reset logo */
 
-body{
+body {
     background-image: url(../img/back.jpg);
     overflow: hidden;
 }
@@ -45,7 +45,8 @@ img {
     justify-content: center;
     margin-top: -100px;
 }
-#reset{
+
+#reset {
     position: fixed;
     bottom: 10px;
     background-color: #FFCA39;
@@ -54,6 +55,7 @@ img {
     width: 120px;
     height: 40px;
 }
+
 /*CHOOSE YOURS*/
 .box-choose {
     display: flex;
@@ -107,13 +109,16 @@ img {
     margin-top: 500px;
 }
 
-#choose{
+#choose {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     visibility: hidden;
-    background-color: rgba(255, 202, 57, 0.829);
     border-radius: 10px;
     margin-top: 100px;
 }
-#play{
+
+#play {
     margin-left: 30px;
     margin-top: 10px;
     background-color: #FFCA39;
@@ -122,7 +127,8 @@ img {
     width: 100px;
     height: 40px;
 }
-#battle{
+
+#battle {
     visibility: hidden;
     position: fixed;
     bottom: 100px;
@@ -163,3 +169,44 @@ p {
     border-radius: 10px;
     margin: 5px;
 }
+
+.btnselect{
+    position: fixed;
+    top: 10px;
+}
+
+.btnselect1{
+    position: fixed;
+    top: 10px;
+    left: 200px;
+}
+
+.actions-menu {
+    margin-bottom: 5px;
+}
+
+button {
+    background-color: black;
+    border: none;
+    border-radius: 10px;
+    
+}
+
+.card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 208, 0, 0.829);
+    margin: 10px;
+}
+
+.card-selected {
+    border: #88950C 2px solid;
+    padding: 3px 3px 3px 3px;
+}
+
+.card-selected .select-card-button {
+    bottom: 2px;
+    right: 2px;
+}
+
